@@ -9,6 +9,7 @@ using Event.Database;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
+using Event.Domain.Infrastructure;
 
 namespace EventApp
 {
@@ -28,6 +29,8 @@ namespace EventApp
             {
                 options.JsonSerializerOptions.PropertyNamingPolicy = null;
             });
+
+            services.AddScoped<IDBInitializer, DBInitializer>();
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["DefaultConnection"]));
 
@@ -78,8 +81,10 @@ namespace EventApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDBInitializer dBInitializer)
         {
+            dBInitializer.Initialize();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -90,6 +95,7 @@ namespace EventApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
 
             app.UseAuthentication();
 
