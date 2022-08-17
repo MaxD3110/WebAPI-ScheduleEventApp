@@ -1,0 +1,15 @@
+A:\EventApp\Event.Domain\bin\Debug\net5.0\Event.Domain.deps.json
+A:\EventApp\Event.Domain\bin\Debug\net5.0\Event.Domain.runtimeconfig.json
+A:\EventApp\Event.Domain\bin\Debug\net5.0\Event.Domain.runtimeconfig.dev.json
+A:\EventApp\Event.Domain\bin\Debug\net5.0\Event.Domain.dll
+A:\EventApp\Event.Domain\bin\Debug\net5.0\ref\Event.Domain.dll
+A:\EventApp\Event.Domain\bin\Debug\net5.0\Event.Domain.pdb
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.csproj.AssemblyReference.cache
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.AssemblyInfoInputs.cache
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.AssemblyInfo.cs
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.csproj.CoreCompileInputs.cache
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.dll
+A:\EventApp\Event.Domain\obj\Debug\net5.0\ref\Event.Domain.dll
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.pdb
+A:\EventApp\Event.Domain\obj\Debug\net5.0\Event.Domain.genruntimeconfig.cache
