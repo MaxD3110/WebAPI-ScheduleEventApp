@@ -1,7 +1,6 @@
 ﻿using Event.Domain.Infrastructure;
 using Event.Domain.Models;
 using Mapster;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
@@ -23,10 +22,7 @@ namespace Event.Application
         {
             var newEvent = request.Adapt<ScheduleEvent>();
 
-            if (await _eventManager.CreateEvent(newEvent) <= 0)
-            {
-                throw new Exception("Failed to create product");
-            }
+            await _eventManager.CreateEvent(newEvent);
 
             return newEvent;
         }

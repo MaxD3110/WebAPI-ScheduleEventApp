@@ -54,7 +54,7 @@ namespace EventApp.Controllers
                     signingCredentials: signIn
                     );
 
-                return Ok("Bearer " + new JwtSecurityTokenHandler().WriteToken(token));
+                return Ok($"Bearer {new JwtSecurityTokenHandler().WriteToken(token)}");
             }
             else
                 return BadRequest("Invalid user data");

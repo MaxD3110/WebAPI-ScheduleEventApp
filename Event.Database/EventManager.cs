@@ -28,6 +28,9 @@ namespace Event.Database
         {
             var eventById = _ctx.SEvents.FirstOrDefault(p => p.Id == id);
 
+            if (eventById == null)
+                return Task.FromResult(0);
+
             _ctx.SEvents.Remove(eventById);
 
             return _ctx.SaveChangesAsync();

@@ -1,4 +1,5 @@
 ﻿using Event.Domain.Infrastructure;
+using Event.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
@@ -20,12 +21,20 @@ namespace Event.Database
                 _ctx.Database.Migrate();
             }
 
-            if (!_ctx.JwtUsers.Any())
+            if (!_ctx.JwtUsers.Any() && !_ctx.SEvents.Any()) //Sample objects on first creation
             {
-                _ctx.JwtUsers.Add(new Domain.Models.Users
+                _ctx.JwtUsers.Add(new Users
                 {
                     Name = "admin",
                     Password = "admin"
+                });
+
+                _ctx.SEvents.Add(new ScheduleEvent
+                {
+                    Topic = "Sample topic",
+                    Details = "Sample details",
+                    Speaker = "Sample speaker",
+                    WhereNWnen = "Sample time&place"
                 });
 
                 _ctx.SaveChangesAsync();
